@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    
     <title>Accueil du site Cloche </title>
     <!-- css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
