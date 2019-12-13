@@ -25,7 +25,7 @@
                 session_start();
                 $_SESSION['login'] = $login;
                 $_SESSION['mdp'] = $mdp;
-                header('Location:PagePrincipal.php');        
+                header('Location:acceuil.php');        
             }
 
             else 
@@ -51,8 +51,6 @@
         $affichage = $db->query('SELECT trame_complete FROM trame_gps ORDER BY date_trame DESC ');
         $tab = $affichage->fetch();
         echo $tab[0];
-
- 
     }
 
 
@@ -60,7 +58,7 @@
     {
         try
         {
-            $db= new PDO('mysql:host=192.168.65.223;dbname=bddconnexion;charset=utf8','userweb','userweb');
+            $db= new PDO('mysql:host=192.168.65.223;dbname=projet_cloche;charset=utf8','userweb','userweb');
         }
         catch(Exception $e)
         {
@@ -76,7 +74,7 @@
     {
         try
         {
-            $db= new PDO('mysql:host=192.168.65.223;dbname=bddconnexion;charset=utf8','userweb','userweb');
+            $db= new PDO('mysql:host=192.168.65.223;dbname=projet_cloche;charset=utf8','userweb','userweb');
         }
         catch(Exception $e)
         {
@@ -94,7 +92,7 @@
     {
         try
         {
-            $db= new PDO('mysql:host=192.168.65.223;dbname=bddconnexion;charset=utf8','userweb','userweb');
+            $db= new PDO('mysql:host=192.168.65.223;dbname=projet_cloche;charset=utf8','userweb','userweb');
         }
         catch(Exception $e)
         {
@@ -112,7 +110,7 @@
     { 
         try
         {
-            $db= new PDO('mysql:host=192.168.65.223;dbname=bddconnexion;charset=utf8','userweb','userweb');
+            $db= new PDO('mysql:host=192.168.65.223;dbname=projet_cloche;charset=utf8','userweb','userweb');
         }
         catch(Exception $e)
         {
@@ -125,8 +123,8 @@
         <div>
         <table>
         <tr>
-        <th><center>Nom d'utilisateur</center></th>
-        <th><center>Mot de passe</center></th>
+            <th><center>Nom d'utilisateur</center></th>
+            <th><center>Mot de passe</center></th>
         </tr>
         <?php
         while ($donnee = $user->fetch())
@@ -139,10 +137,9 @@
         ?>
         </table>
         </div>
+
         <?php
     }
         ?>
-
-
 
 

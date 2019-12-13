@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=192.168.65.223;dbname=bddconnexion', 'userweb', 'userweb');
+$bdd = new PDO('mysql:host=192.168.65.223;dbname=projet_cloche', 'userweb', 'userweb');
 
 if(isset($_POST['forminscription'])) {
    $pseudo = ($_POST['pseudo']);
