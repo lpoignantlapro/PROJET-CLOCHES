@@ -1,0 +1,62 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::IdTCPServer1Connect(TIdContext *AContext)
+{
+Memo1->Lines->Add("L'adresse ip du client :");
+  Memo1->Lines->Add(AContext->Binding->PeerIP);
+  Memo1->Lines->Add("Le port du client est :");
+  Memo1->Lines->Add(IntToStr(AContext->Binding->PeerPort));
+
+  Acontext->Connection->IOHandler->WriteLn("$PGA;56465;46;546;546;456;465;46");
+}		  Acontext->Connection->DiscTObjectonnect();
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click( *Sender)
+{
+Label1->Caption="Le serveur est en cours d'exécution";
+IdTCPServer1->Active=true;
+Memo1->Visible=true;
+activer->Visible=false;
+desactiver->Visible=true;
+
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::IdTCPServer1Execute(TIdContext *AContext)
+{
+Label1->Caption="Le serveur a reçu";
+Sleep(3000);
+Label1->Caption="Le serveur est en cours d'exécution";
+}
+
+
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::IdTCPServer1AfterBind(TObject *Sender)
+{
+	IdTCPServer1->Activate=false;
+	Memo1->Visible=false;
+	desactiver->Visible=false;
+	activer->Visible=true;
+	Label1->Caption="Le serveur est éteint";
+
+
+}
+//---------------------------------------------------------------------------
