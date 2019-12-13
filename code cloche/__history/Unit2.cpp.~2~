@@ -1,0 +1,36 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+#include "Unit1.h"
+#include "Unit2.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+cloche::cloche()
+{
+
+}
+cloche::~cloche()
+{
+
+}
+
+void cloche::cloche1()
+{
+
+
+}
+void cloche::cloche2()
+{
+
+
+}
+void cloche::cloche3()
+{
+
+
+}
+void cloche::cloche4()
+{
+
+
+}
