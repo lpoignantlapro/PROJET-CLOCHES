@@ -1,0 +1,19 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+#endif
+class cloche
+{
+	private :
+
+
+	public :
+	  void cloche1();
+	  void cloche2();
+	  void cloche3();
+	  void cloche4();
+
+}
+
